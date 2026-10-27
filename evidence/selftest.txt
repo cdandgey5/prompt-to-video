@@ -1,0 +1,30 @@
+# The engine's self-test: every check is broken on purpose, and must fail.
+# Run on 26 Oct 2026. Output unedited.
+
+baseline: check passes
+
+caught  RULE 5  · figure without source=
+caught  RULE 1  · text on a flat background
+caught  RULE 12 · quote without attribution
+caught  JSX     · literal \u escape in an attribute
+caught  RULE 14 · stock photo missing from disk
+caught  CLIPS   · clip beat with no generated clip
+caught  SCRIPT  · beat kind that does not exist
+caught  SCRIPT  · stock used but not declared
+caught  SCRIPT  · beat with no narration
+caught  CUES    · [num] without src=
+caught  CUES    · unknown cue kind
+caught  CUES    · ** emphasis never closed
+caught  CUES    · [lower] without a lower: line
+caught  SFX     · a sound effect missing from disk
+caught  RULE 35 · a sound effect too quiet to hear
+caught  RULE 27 · b-roll clip referenced but missing on disk
+caught  RULE 28 · declared music missing on disk
+caught  RULE 29 · caption words out of order
+caught  CUES    · a timed cue outside the edit
+caught  ALIGN   · a beat missing from the recording stops conform
+caught  RULE 34 · a face beat in a voice-only video
+caught  RULE 34 · parse rejects `## face` under `voice:`
+ok      ALIGN   · aligner self-test (retakes, absorption, Telugu keys)
+
+all 23 guards fire.

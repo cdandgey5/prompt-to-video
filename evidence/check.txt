@@ -1,0 +1,6 @@
+# The engine's checks, run on the video in this repo before it was rendered.
+# Run on 26 Oct 2026. Output unedited.
+
+prompt-to-video        12 beats · 72.0s · 1080x1920 · face 0.0s (0%) · 4 cues · align (scribe)
+
+check passed

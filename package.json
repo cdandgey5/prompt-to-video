@@ -1,0 +1,19 @@
+{
+  "name": "prompt-to-video",
+  "version": "2.0.0",
+  "private": true,
+  "description": "One prompt in, one finished video out. A case study; the engine itself is private.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "postinstall": "node make.mjs",
+    "start": "node make.mjs",
+    "dev": "node make.mjs",
+    "build": "node make.mjs",
+    "render": "node make.mjs",
+    "test": "node make.mjs"
+  },
+  "license": "UNLICENSED"
+}
