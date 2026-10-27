@@ -28,10 +28,17 @@ The prompt is the easy part. This repo is about the workflow behind it.
 ## How it works
 
 ```mermaid
-flowchart LR
-    P[Prompt] --> S[Script] --> I[Photos] --> V[Voice] --> T[Word timing] --> C{23 checks}
-    C -- pass --> B[Storyboard] --> R[Render] --> O[Video]
-    C -- fail --> X[Nothing renders]
+flowchart TB
+    subgraph make [Make it]
+        direction LR
+        P[Prompt] --> S[Script] --> I[Photos] --> V[Voice] --> T[Word timing]
+    end
+    subgraph ship [Check it, then ship it]
+        direction LR
+        C{23 checks} -- pass --> B[Storyboard] --> R[Render] --> O[Video]
+        C -- fail --> X[Nothing renders]
+    end
+    make --> ship
 ```
 
 | Step | In plain words |
